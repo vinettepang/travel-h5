@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>分类页</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="css/ydui.css?rev=a4b9d6e8c9c1cae7ea4676f911682af7"/>
+    <link rel="stylesheet" href="css/demo.css"/>
+    <script src="js/ydui.flexible.js"></script>
+</head>
+<body>
+<section class="g-flexview">
+    <section class="g-scrollview">
+
+        <div class="m-scrolltab" data-ydui-scrolltab>
+            <div class="scrolltab-nav">
+                <a href="javascript:;" class="scrolltab-item">
+                    
+                    <div class="scrolltab-title">空调</div>
+                </a>
+                <a href="javascript:;" class="scrolltab-item">
+                    
+                    <div class="scrolltab-title">冰箱</div>
+                </a>
+                <a href="javascript:;" class="scrolltab-item">
+                    
+                    <div class="scrolltab-title">洗衣机</div>
+                </a>
+                <a href="javascript:;" class="scrolltab-item">
+                    
+                    <div class="scrolltab-title">热水器</div>
+                </a>
+                <a href="javascript:;" class="scrolltab-item">
+                    
+                    <div class="scrolltab-title">厨房大家电</div>
+                </a>
+                <a href="javascript:;" class="scrolltab-item">
+                    
+                    <div class="scrolltab-title">厨房小家电</div>
+                </a>
+                <a href="javascript:;" class="scrolltab-item">
+                    
+                    <div class="scrolltab-title">生活家电</div>
+                </a>
+                <a href="javascript:;" class="scrolltab-item">
+                    
+                    <div class="scrolltab-title">风扇</div>
+                </a>
+            </div>
+            <div class="scrolltab-content">
+                <div class="scrolltab-content-item">
+                    <strong class="scrolltab-content-title">空调</strong>
+                    <div style="height: 300px;background-color: gray;"></div>
+                </div>
+                <div class="scrolltab-content-item">
+                    <strong class="scrolltab-content-title">冰箱</strong>
+                    <div style="height: 300px;background-color: blue;"></div>
+                </div>
+                <div class="scrolltab-content-item">
+                    <strong class="scrolltab-content-title">洗衣机</strong>
+                    <div style="height: 300px;background-color: yellow;"></div>
+                </div>
+                <div class="scrolltab-content-item">
+                    <strong class="scrolltab-content-title">热水器</strong>
+                    <div style="height: 300px;background-color: green;"></div>
+                </div>
+                <div class="scrolltab-content-item">
+                    <strong class="scrolltab-content-title">厨房大家电</strong>
+                    <div style="height: 300px;background-color: saddlebrown;"></div>
+                </div>
+                <div class="scrolltab-content-item">
+                    <strong class="scrolltab-content-title">厨房小家电</strong>
+                    <div style="height: 300px;background-color: darkgoldenrod;"></div>
+                </div>
+                <div class="scrolltab-content-item">
+                    <strong class="scrolltab-content-title">生活家电</strong>
+                    <div style="height: 300px;background-color: indianred;"></div>
+                </div>
+                <div class="scrolltab-content-item">
+                    <strong class="scrolltab-content-title">风扇</strong>
+                    <div style="height: 300px;background-color: aqua;"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="m-tabbar">
+        <a href="#" class="tabbar-item">
+            <span class="tabbar-icon">
+                <i class="icon-home-outline"></i>
+            </span>
+            <span class="tabbar-txt">首页</span>
+        </a>
+        <a href="#" class="tabbar-item">
+            <span class="tabbar-icon">
+                <i class="icon-shopcart-outline"></i>
+                <span class="tabbar-dot"></span>
+            </span>
+            <span class="tabbar-txt">购物车</span>
+
+        </a>
+        <a href="#" class="tabbar-item tabbar-active">
+            <span class="tabbar-icon">
+                <i class="icon-ucenter"></i>
+                <span class="badge badge-danger">2</span>
+            </span>
+            <span class="tabbar-txt">个人中心</span>
+        </a>
+        <a href="#" class="tabbar-item">
+            <span class="tabbar-icon">
+                <i class="icon-shopcart-outline"></i>
+                <span class="tabbar-dot"></span>
+            </span>
+            <span class="tabbar-txt">购物车</span>
+
+        </a>
+        <a href="#" class="tabbar-item tabbar-active">
+            <span class="tabbar-icon">
+                <i class="icon-ucenter"></i>
+                <span class="badge badge-danger">2</span>
+            </span>
+            <span class="tabbar-txt">个人中心</span>
+        </a>
+    </footer>
+</section>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/ydui.js"></script>
+<script>(!YDUI.device.isMobile && navigator.userAgent.indexOf('Firefox') >= 0) && YDUI.dialog.alert('PC端请使用谷歌内核浏览器查看！');</script>
+<script type="text/javascript">
+    $.each($('.J_Progress'), function(index, val) {
+        console.log(index,$(this).attr('progessVal'));
+        index++;
+        let obj = '#J_Progress'+index;
+        let progerssVal = $(this).attr('progessVal');
+        console.log(obj);
+        $(obj).progressBar({
+            type: 'circle',
+            strokeWidth: 2,
+            strokeColor: '#B2B2B2',
+            trailWidth: 5,
+            trailColor: '#FE5D51',
+            fill: '#FFF',
+            progress: progerssVal
+        });
+    });
+</script>
+</body>
+</html>

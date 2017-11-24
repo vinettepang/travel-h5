@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>行程详情页</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="css/ydui.css?rev=a4b9d6e8c9c1cae7ea4676f911682af7"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="plugin/Swiper-3.4.2/dist/css/swiper.min.css">
+    <script src="js/ydui.flexible.js"></script>
+</head>
+<body>
+    <style type="text/css">
+        .circle-box{
+            position: relative;
+            width: 100px;
+            height: 30px;
+            color: #FFF;
+            border:1px solid #66dc9b;
+            font-size: 1.2rem;
+            text-align: center;
+            line-height: 30px;overflow: hidden;
+        }
+        /*.circle-box::after{
+            width: 20px;height: 20px;background: red;border-radius: 100%;content: "";display: block;position: absolute; right: -10px;
+            top: 5px;overflow: hidden;
+        }*/
+        .circle-box::after {
+             width:10px;
+               height:20px;
+               border-radius:10px 0 0 10px;
+               background:red;
+            
+            content: "";        
+            right: -10px;
+            top: 5px;
+             /* border:1px solid #66dc9b; */
+            position: absolute;
+            display: block; 
+           /* background: #FFF;*/
+            border-radius: 20px;    border-width: 1px 0px 1px 1px;
+        }
+        .circle-link{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            right: -21px;
+            z-index: 9;
+        }
+        .circle-link::before {
+            width: 20px;
+            height: 20px;
+            content: "";    
+             background-color: white;
+            position: absolute;
+            display: block; 
+           transform: translate(0,-50%);
+            top: 50%;
+            left: 10px;
+            border-radius: 20px;
+        }
+        .circle-link::after {
+            width: 20px;
+            height: 20px;
+            content: "";        
+             background-color: white;
+            position: absolute;
+            display: block; 
+           transform: translate(0,-50%);
+            top: 50%;
+            right: 10px;
+            border-radius: 20px;
+        }
+        .circle-link span{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            display: inline-block;
+            height: 3px;
+            width: 20px;
+            background-color: #000;
+        }
+        .square, .square > div { box-sizing: border-box; }
+        .square { 
+            width: 130px; 
+            position: relative; 
+            /*border:1px solid #66dc9b;*/
+            /*top: calc(50vh - 200px);
+            left: calc(50vw - 150px);*/
+            overflow: hidden;
+        }
+        .square > .s-top { 
+            border: 1px solid #66dc9b;
+            background-color: #f5fcf8;
+            height: 20px;
+            border-radius: 5px 5px 0 0;
+            border-width: 1px 1px 0 1px; 
+        }
+        .square > .s-middle { 
+            border-left: 1px solid #66dc9b; 
+            background-color: #f5fcf8;
+            height: 20px;
+        }
+        .square > .s-bottom { 
+            background-color: #f5fcf8;
+            border: 1px solid #66dc9b;
+            height: 20px;
+            border-radius: 0 0 5px 5px;
+            border-width: 0px 1px 1px 1px; 
+        }
+        .square > .s-half-circle { 
+            border: 1px solid #66dc9b;
+            position: absolute;
+            width: 10px;
+            height: 20px;
+            border-width: 1px 0px 1px 1px;
+            border-radius: 30px 0 0 30px;
+            top: calc(50% - 10px);
+            right: 0;
+            background-color: #fff;
+        }
+        .square > .s-background {
+            border: 120px solid #f5fcf8;
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            top: calc(50% - 130px);
+
+            /*right: -390px;*/
+        }
+        .circle { 
+            width: 20px;
+            height: 20px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(50% - 25px);
+            left: calc(50% + 125px);
+            background-color: rgba(255,255,255,.3);
+            box-sizing: border-box;
+        }
+    </style>
+<section class="g-flexview">
+    <div class="g-scrollview">
+        <section class="container">
+            <div class="banner-list">
+                <div class="banner-item">
+                    <img class="img-responsive" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511269729427&di=bd2f44241627ae0598d0a62a260f9a99&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fbaike%2Fc0%253Dbaike60%252C5%252C5%252C60%252C20%2Fsign%3D752f9fd3b051f819e5280b18bbdd2188%2F4a36acaf2edda3cc30e4a1d801e93901203f92c1.jpg">
+                </div>
+            </div>
+            <div class="card-box">
+                <div class="list-mes">
+                    <h3 class="list-title">洋洋</h3>
+                    <div class="list-mes-item">
+                        <div class="ft16">
+                            <p>难度：穿越</p>
+                            <p>集合：广州东站1号安检</p>
+                        </div>
+                        <div><span class="list-price"><em>¥</em>980</span>元/人</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+           <div class="card-header flex-between">
+               <p>出发时间</p>
+               <a href="">我要定制></a>
+           </div> 
+            <div>
+                <div class="square">
+                <div class="s-top"></div>
+                <div class="s-middle"></div>
+                <div class="s-bottom"></div>
+                <div class="s-half-circle"></div>
+                <!-- <div class="s-background"></div> -->
+            </div>
+            <div class="circle"></div>
+            </div>
+           <div class="swiper-container cross-slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="circle-box">
+                            <p><span class="bold ft16 m-b-5 m-t-5">12月5</span><span class="ft12">~12月5</span></p>
+                            <p class="ft12 m-b-5">报名中</p>
+                            <a class="btn btn-green-xs" href="">查看</a>
+                            <!-- <div class="circle-link"><span></span></div> -->
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="circle-box">
+                            <p><span class="bold ft16 m-b-5 m-t-5">12月5</span><span class="ft12">~12月5</span></p>
+                            <p class="ft12 m-b-5">报名中</p>
+                            <a class="btn btn-green-xs" href="">查看</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="circle-box">
+                            <p><span class="bold ft16 m-b-5 m-t-5">12月5</span><span class="ft12">~12月5</span></p>
+                            <p class="ft12 m-b-5">报名中</p>
+                            <a class="btn btn-green-xs" href="">查看</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="circle-box">
+                            <p><span class="bold ft16 m-b-5 m-t-5">12月5</span><span class="ft12">~12月5</span></p>
+                            <p class="ft12 m-b-5">报名中</p>
+                            <a class="btn btn-green-xs" href="">查看</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="m-tab" data-ydui-tab><!-- 这里添加data-ydui-tab就可以啦 -->
+            <ul class="tab-nav affix-nav">
+                <li class="tab-nav-item tab-active"><a href="javascript:;">活动详情</a></li>
+                <li class="tab-nav-item"><a href="javascript:;">行程与准备</a></li>
+                <li class="tab-nav-item"><a href="javascript:;">费用说明</a></li>
+                <li class="tab-nav-item"><a href="javascript:;">评价</a></li>
+            </ul>
+            <div class="tab-panel">
+                <div class="tab-panel-item tab-active">111111</div>
+                <div class="tab-panel-item">222222</div>
+                <div class="tab-panel-item">333333</div>
+                <div class="tab-panel-item">444444</div>
+            </div>
+        </div>
+        <article class="m-list list-theme-grids-2">
+            <div class="line-title flex-between">
+                <span>相关推荐</span>
+                <a href="">更多></a>
+            </div>
+            <a href="javascript:;" class="list-item">
+                <div class="list-img">
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511326615761&di=86498bf1a9bd4ea173f302dfc97a0b0d&imgtype=0&src=http%3A%2F%2Fmvimg10.meitudata.com%2F5787ae1c980939051.jpg">
+                </div>
+                <div class="list-mes">
+                    <h3 class="list-title">轻奢武功山</h3>
+                    <div class="list-mes-item">
+                        <div>
+                            <span class="list-date"><em>周五</em></span>
+                        </div>
+                        <div><em class="label-item label-green">报名中</em></div>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:;" class="list-item">
+                <div class="list-img">
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511326615761&di=86498bf1a9bd4ea173f302dfc97a0b0d&imgtype=0&src=http%3A%2F%2Fmvimg10.meitudata.com%2F5787ae1c980939051.jpg">
+                </div>
+                <div class="list-mes">
+                    <h3 class="list-title">轻奢武功山</h3>
+                    <div class="list-mes-item">
+                        <div>
+                            <span class="list-date"><em>周五</em></span>
+                        </div>
+                        <div><em class="label-item label-green">报名中</em></div>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:;" class="list-item">
+                <div class="list-img">
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511326615761&di=86498bf1a9bd4ea173f302dfc97a0b0d&imgtype=0&src=http%3A%2F%2Fmvimg10.meitudata.com%2F5787ae1c980939051.jpg">
+                </div>
+                <div class="list-mes">
+                    <h3 class="list-title">轻奢武功山</h3>
+                    <div class="list-mes-item">
+                        <div>
+                            <span class="list-date"><em>周五</em></span>
+                        </div>
+                        <div><em class="label-item label-green">报名中</em></div>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:;" class="list-item">
+                <div class="list-img">
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511326615761&di=86498bf1a9bd4ea173f302dfc97a0b0d&imgtype=0&src=http%3A%2F%2Fmvimg10.meitudata.com%2F5787ae1c980939051.jpg">
+                </div>
+                <div class="list-mes">
+                    <h3 class="list-title">轻奢武功山</h3>
+                    <div class="list-mes-item">
+                        <div>
+                            <span class="list-date"><em>周五</em></span>
+                        </div>
+                        <div><em class="label-item label-green">报名中</em></div>
+                    </div>
+                </div>
+            </a>
+        </article>
+    </div>
+    <footer class="m-tabbar">
+        <a href="#" class="tabbar-item tabbar-active">
+            <span class="tabbar-icon">
+                <i class="icon-home-outline"></i>
+            </span>
+            <span class="tabbar-txt">首页</span>
+        </a>
+        <a href="#" class="tabbar-item">
+            <span class="tabbar-icon">
+                <i class="icon-type"></i>
+            </span>
+            <span class="tabbar-txt">分类</span>
+
+        </a>
+        <a href="#" class="tabbar-item">
+            <span class="tabbar-icon">
+                <i class="icon-feedback"></i>
+            </span>
+            <span class="tabbar-txt">轻记</span>
+        </a>
+        <a href="#" class="tabbar-item">
+            <span class="tabbar-icon">
+                <i class="icon-discover"></i>
+            </span>
+            <span class="tabbar-txt">翻牌</span>
+        </a>
+        <a href="#" class="tabbar-item">
+            <span class="tabbar-icon">
+                <i class="icon-ucenter-outline"></i>
+                <span class="badge badge-danger">2</span>
+            </span>
+            <span class="tabbar-txt">我的</span>
+        </a>
+    </footer>
+</section>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/ydui.js"></script>
+<script src="plugin/Swiper-3.4.2/dist/js/swiper.min.js"></script>
+<script src="js/v-tools.js"></script>
+<script>
+    (!YDUI.device.isMobile && navigator.userAgent.indexOf('Firefox') >= 0) && YDUI.dialog.alert('PC端请使用谷歌内核浏览器查看！');
+    var swiper = new Swiper('.swiper-container.cross-slide', {
+        pagination: '.swiper-container.cross-slide .swiper-pagination',
+        slidesPerView: 'auto',
+        paginationClickable: true,
+        freeMode: true,
+        spaceBetween: 30
+    });
+</script>
+</body>
+</html>
