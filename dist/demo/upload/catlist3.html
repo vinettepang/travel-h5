@@ -7,20 +7,20 @@
     <meta content="yes" name="apple-mobile-web-app-capable"/>
     <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
     <meta content="telephone=no" name="format-detection"/>
-    <link rel="stylesheet" href="css/ydui.css?rev=a4b9d6e8c9c1cae7ea4676f911682af7"/>
+    <link rel="stylesheet" href="plugin/ui/css/ydui.css?rev=a4b9d6e8c9c1cae7ea4676f911682af7"/>
+    <link rel="stylesheet" href="plugin/Swiper-3.4.2/dist/css/swiper.min.css">
     <link rel="stylesheet" href="css/app.css"/>
-    <script src="js/ydui.flexible.js"></script>
 </head>
 <body>
 <section class="g-flexview">
     <div class="g-scrollview">
-        <div class="m-tab demo-small-pitch m-scrolltab vertical-tabnav" data-ydui-tab>
+        <div class="m-tab demo-small-pitch cat-nav" data-ydui-tab>
             <ul class="tab-nav">
-                <li class="tab-nav-item tab-active"><a href="javascript:;">广东</a></li>
-                <li class="tab-nav-item"><a href="javascript:;">贵州</a></li>
-                <li class="tab-nav-item"><a href="javascript:;">江西</a></li>
-                <li class="tab-nav-item"><a href="javascript:;">四川</a></li>
-                <li class="tab-nav-item"><a href="javascript:;">云南</a></li>
+                <li class="tab-nav-item tab-active"><a href="javascript:;"><div class="progress-bar J_Progress progress-box" id="J_Progress1" progessVal="0.142"><div class="progressbar-content">1</div></div><span class="progress-text">1天</span></a></li>
+                <li class="tab-nav-item"><a href="javascript:;"><div class="progress-bar J_Progress progress-box" id="J_Progress2" progessVal="0.284"><div class="progressbar-content">2</div></div><span class="progress-text">2天</span></a></li>
+                <li class="tab-nav-item"><a href="javascript:;"><div class="progress-bar J_Progress progress-box" id="J_Progress3" progessVal="0.426"><div class="progressbar-content">3</div></div><span class="progress-text">3天</span></a></li>
+                <li class="tab-nav-item"><a href="javascript:;"><div class="progress-bar J_Progress progress-box" id="J_Progress4" progessVal="0.568"><div class="progressbar-content">4~6</div></div><span class="progress-text">4~6天</span></a></li>
+                <li class="tab-nav-item"><a href="javascript:;"><div class="progress-bar J_Progress progress-box" id="J_Progress5" progessVal="1"><div class="progressbar-content">7+</div></div><span class="progress-text">7天以上</span></a></li>
             </ul>
             <div class="tab-panel">
                 <div class="tab-panel-item tab-active">
@@ -227,8 +227,9 @@
         </a>
     </footer>
 </section>
-<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="js/ydui.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="plugin/ui/js/ydui.js"></script>
+<script src="plugin/ui/js/ydui.flexible.js"></script>
 <script src="plugin/Swiper-3.4.2/dist/js/swiper.min.js"></script>
 <script src="js/v-tools.js"></script>
 <script>(!YDUI.device.isMobile && navigator.userAgent.indexOf('Firefox') >= 0) && YDUI.dialog.alert('PC端请使用谷歌内核浏览器查看！');</script>
