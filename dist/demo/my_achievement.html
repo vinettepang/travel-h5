@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>成就页</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="css/ydui.css?rev=a4b9d6e8c9c1cae7ea4676f911682af7"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <script src="js/ydui.flexible.js"></script>
+    <style type="text/css">
+        .icon-circle-add{
+            display: inline-block;
+    background-color: #04be02;  
+    width: 30px;
+    height: 30px;  
+    border-radius: 50%;  
+    position: relative;  
+    box-shadow: 0 0 0 3px rgba(4, 190, 2,.2); 
+        }
+        .icon-circle{
+            display: inline-block;
+    background-color: #04be02;  
+    width: 10px;
+    height: 10px; 
+    margin: 0px 0 0 0px;  
+    border-radius: 50%;  
+    position: relative;  
+    box-shadow: 0 0 0 3px rgba(4, 190, 2,.2); 
+        }
+        .icon-circle-add:before{
+        content: '+';
+        color: #fff;
+        font-size: 20px;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .timeline{
+        position: relative;
+        margin: 20px;
+        /*height: 50px;*/
+    }
+    .timeline-item{
+        display: flex;
+        flex-flow: row;
+    }
+    .timeline-date{
+        height: 50px;
+        line-height: 50px;
+        margin-right: 10px;
+
+    align-self: center;
+    }
+    .timeline-line{
+            position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 5px;
+        display: inline-block;
+        height: 100%;
+        width: 2px;
+        background-color: #04be02;
+    }
+    .timeline-icon{
+        display: inline-block;
+        position: relative;
+        margin-right: 10px;
+    }
+    .timeline-icon .icon-circle{
+            top: 50%;
+            transform: translate(0,-50%);
+    }
+    .timeline-text{
+            flex: 1;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: #fff;
+        margin: 10px 0;
+    }
+    </style>
+</head>
+<body>
+<section class="g-flexview">
+    <div class="g-scrollview">
+        <section class="g-flexview">
+            <header class="m-navbar w-bg">
+                <a href="javascript:history.back()" class="navbar-item"><i class="back-ico"></i></a>
+                <div class="navbar-center"><span class="navbar-title">成就</span></div>
+            </header>
+            <div class="add-bar">
+                <a href="my_add_achieve.html"><i class="icon-circle-add m-r-20"></i><span>点击添加您的户外行程</span></a>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">2018-02-28</span>
+                    <span class="timeline-icon"><i class="icon-circle"></i><i class="timeline-line"></i></span>
+                    <span class="timeline-text">一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游一日游</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2018-02-28</span>
+                    <span class="timeline-icon"><i class="icon-circle"></i><i class="timeline-line"></i></span>
+                    <span class="timeline-text">一日游</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2018-02-28</span>
+                    <span class="timeline-icon"><i class="icon-circle"></i><i class="timeline-line"></i></span>
+                    <span class="timeline-text">一日游</span>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/ydui.js"></script>
+<script>(!YDUI.device.isMobile && navigator.userAgent.indexOf('Firefox') >= 0) && YDUI.dialog.alert('PC端请使用谷歌内核浏览器查看！');</script>
+</body>
+</html>

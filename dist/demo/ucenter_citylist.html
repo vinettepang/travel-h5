@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>城市列表页</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="css/ydui.css?rev=a4b9d6e8c9c1cae7ea4676f911682af7"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <script src="js/ydui.flexible.js"></script>
+</head>
+<body>
+<section class="g-flexview">
+    <div class="g-scrollview">
+        <header class="m-navbar w-bg">
+            <a href="setting.html" class="navbar-item">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title"></span>
+            </div>
+            <a href="#" class="navbar-item">
+                <i class="icon-home-outline"></i>
+            </a>
+        </header>
+        <section class="container">
+            <div class="m-cell">
+                <a class="cell-item" href="#">
+                    <div class="cell-left">不限</div>
+                    <div class="cell-right"></div>
+                </a>
+                <a class="cell-item" href="#">
+                    <div class="cell-left">广州</div>
+                    <div class="cell-right"></div>
+                </a>
+                <a class="cell-item" href="#">
+                    <div class="cell-left">深圳</div>
+                    <div class="cell-right"></div>
+                </a>
+                <a class="cell-item" href="#">
+                    <div class="cell-left">佛山</div>
+                    <div class="cell-right"></div>
+                </a>
+                <a class="cell-item" href="#">
+                    <div class="cell-left">东莞</div>
+                    <div class="cell-right"></div>
+                </a>
+            </div>
+            <button type="button" class="btn-block btn-primary">确定</button>
+        </section>
+    </div>
+</section>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/ydui.js"></script>
+<script>(!YDUI.device.isMobile && navigator.userAgent.indexOf('Firefox') >= 0) && YDUI.dialog.alert('PC端请使用谷歌内核浏览器查看！');</script>
+</body>
+</html>

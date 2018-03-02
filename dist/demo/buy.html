@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>报名页</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="css/ydui.css?rev=a4b9d6e8c9c1cae7ea4676f911682af7"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <script src="js/ydui.flexible.js"></script>
+</head>
+<body>
+<section class="g-flexview">
+    <div class="g-scrollview">
+        <section class="g-flexview">
+
+    <header class="m-navbar w-bg">
+        <a href="javascript:history.back()" class="navbar-item"><i class="back-ico"></i></a>
+        <div class="navbar-center"><span class="navbar-title">个人资料</span></div>
+    </header>
+
+    <section class="g-scrollview">
+        <div class="m-celltitle">请填写真实信息<p class="tips">将为您投保</p>
+            <div class="pull-right">常用人</div>
+        </div>
+        
+        <div class="m-cell demo-small-pitch">
+            <div class="cell-item">
+                <div class="cell-left">真实姓名：</div>
+                <div class="cell-right"><input type="text" class="cell-input text-right" placeholder="(与证件名字一致)" autocomplete="off"></div>
+            </div>
+            <div class="cell-item">
+                <div class="cell-left">
+                    <label class="cell-right cell-arrow">
+                    <select class="cell-select" name="">
+                        <option value="0">身份证</option>
+                        <option value="1">护照</option>
+                        <option value="2">其他</option>
+                    </select>
+                </label>
+                </div>
+                <div class="cell-right"><input type="text" class="cell-input text-right" placeholder="(与证件名字一致)" autocomplete="off"></div>
+            </div>
+            <div class="cell-item">
+                <div class="cell-left">出生日期：</div>
+                <div class="cell-right"><input type="text" class="cell-input text-right" placeholder="(例: 2000-01-01)" autocomplete="off"></div>
+            </div>
+            <div class="cell-item">
+                <div class="cell-left">性别：</div>
+                <label class="cell-right cell-arrow">
+                    <select class="cell-select">
+                        <option value="">请选择性别</option>
+                        <option value="1">男</option>
+                        <option value="2">女</option>
+                        <option value="3">未知</option>
+                    </select>
+                </label>
+            </div>
+            <div class="cell-item">
+                <div class="cell-left">电话号码：</div>
+                <div class="cell-right"><input type="text" class="cell-input text-right" placeholder="(必填)" autocomplete="off"></div>
+            </div>
+        </div>
+
+        <div class="m-celltitle">费用详情</div>
+        <div class="m-cell demo-small-pitch">
+            <div class="cell-item">
+                <div class="cell-left">基础价格</div>
+                <div class="cell-right">128元/人</div>
+                <div class="cell-right">1人</div>
+            </div>
+        </div>
+
+        <div class="m-celltitle">商品服务</div>
+        <div class="m-cell demo-small-pitch">
+            <div class="cell-item">
+                <div class="cell-left">基础价格</div>
+                <div class="cell-right">128元/人</div>
+                <div class="cell-right">1人</div>
+            </div>
+        </div>
+        <div class="m-celltitle">支付方式</div>
+        <div class="m-cell">
+            <label class="cell-item">
+                <span class="cell-left">支付宝</span>
+                <label class="cell-right">
+                    <input type="radio" value="1" name="radio">
+                    <i class="cell-checkbox-icon"></i>
+                </label>
+            </label>
+            <label class="cell-item">
+                <span class="cell-left">微信</span>
+                <label class="cell-right">
+                    <input type="radio" value="2" name="radio">
+                    <i class="cell-checkbox-icon"></i>
+                </label>
+            </label>
+        </div>
+        <div class="m-celltitle">优惠抵扣</div>
+        <div class="m-cell">
+            <label class="cell-item">
+                <span class="cell-left">使用学分余额抵扣</span>
+                <label class="cell-right">
+                    <input type="checkbox" value="1" name="checkbox">
+                    <i class="cell-checkbox-icon"></i>
+                </label>
+            </label>
+            <a class="cell-item" href="my_ticketlist.html">
+                <div class="cell-left"><i class="cell-icon demo-icons-order"></i>代金券</div>
+                <div class="cell-right cell-arrow">支付后不退还</div>
+            </a>
+        </div>
+        <div class="m-cell">
+            <label class="cell-item">
+                <label class="cell-right">
+                    <input type="checkbox" value="1" name="checkbox">
+                    <i class="cell-checkbox-icon"></i>
+                    我已阅读并同意 <a>旅游服务协议</a>
+                </label>
+            </label>
+        </div>
+    </section>
+</section>
+    </div>
+</section>
+<footer class="m-tabbar  tabbar-fixed">
+    <div href="#" class="tabbar-item tabbar-active  grow-2">
+        <span class="tabbar-txt">总费用：128元</span>
+    </div>
+    <a href="#" class="tabbar-item bg-green self-btn">
+        <span>支付</span>
+    </a>
+</footer>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/ydui.js"></script>
+<script>(!YDUI.device.isMobile && navigator.userAgent.indexOf('Firefox') >= 0) && YDUI.dialog.alert('PC端请使用谷歌内核浏览器查看！');</script>
+</body>
+</html>

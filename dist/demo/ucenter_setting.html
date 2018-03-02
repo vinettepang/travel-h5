@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>设置页</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="css/ydui.css?rev=a4b9d6e8c9c1cae7ea4676f911682af7"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <script src="js/ydui.flexible.js"></script>
+</head>
+<body>
+<section class="g-flexview">
+    <div class="g-scrollview">
+        <section class="container">
+            <div class="m-tab" data-ydui-tab style="position: relative;">
+                <ul class="tab-nav affix-nav">
+                    <li class="tab-nav-item tab-active"><a href="javascript:;">提醒设置</a></li>
+                    <li class="tab-nav-item"><a href="javascript:;">资料编辑</a></li>
+                </ul>
+                <div class="tab-panel">
+                    <div class="tab-panel-item tab-active">
+                        开启消息提醒功能后，当您关注的内容有更新时，将会通过微信消息提醒您。
+                        <div class="m-cell">
+                            <label class="cell-item">
+                                <span class="cell-left">关注领队动态提醒</span>
+                                <label class="cell-right">
+                                    <input type="checkbox" class="m-switch">
+                                </label>
+                            </label>
+                            <a class="cell-item" href="my_focus.html">
+                                <div class="cell-left"><i class="cell-icon demo-icons-order"></i>我关注的领队<span class="badge badge-danger">3</span></div>
+                                <div class="cell-right cell-arrow"></div>
+                            </a>
+                        </div>
+                        <div class="m-cell">
+                            <label class="cell-item">
+                                <span class="cell-left">有全新路线提醒我</span>
+                                <label class="cell-right">
+                                    <input type="checkbox" class="m-switch">
+                                </label>
+                            </label>
+                        </div>
+                        <div class="m-cell">    
+                            <div class="cell-item">
+                                <div class="cell-left">可报名提醒我</div>
+                                <div class="cell-right">订阅活动：0个</div>
+                            </div>
+                        </div>
+                        <div class="m-cell">
+                            <a class="cell-item" href="ucenter_citylist.html">
+                                <div class="cell-left"><i class="cell-icon demo-icons-order"></i>我的城市：深圳</div>
+                                <div class="cell-right cell-arrow"></div>
+                            </a>
+                            <p class="ft12 p-10">您关注的内容中</p>
+                        </div>
+                        <div class="m-cell">
+                            <label class="cell-item">
+                                <span class="cell-left">新评论提醒我</span>
+                                <label class="cell-right">
+                                    <input type="checkbox" class="m-switch">
+                                </label>
+                            </label>
+                        </div>
+                        <div class="m-cell">
+                            <label class="cell-item">
+                                <span class="cell-left">隐藏我的活动记录</span>
+                                <label class="cell-right">
+                                    <input type="checkbox" class="m-switch">
+                                </label>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tab-panel-item">
+                        <div class="m-cell demo-small-pitch">
+                            <div class="cell-item">
+                                <div class="cell-left">昵称：</div>
+                                <div class="cell-right"><input type="text" class="cell-input" placeholder="请输入您的昵称" autocomplete="off"></div>
+                            </div>
+                            <div class="cell-item">
+                                <div class="cell-left">性别：</div>
+                                <div class="cell-right"><input type="text" class="cell-input" placeholder="性别" autocomplete="off"></div>
+                            </div>
+                            <div class="cell-item">
+                                <div class="cell-left">常用人：</div>
+                                <div class="cell-right"><input type="text" class="cell-input" placeholder="请输入您的姓名" autocomplete="off"></div>
+                            </div>
+                            <div class="cell-item">
+                                <div class="cell-left">联系电话：</div>
+                                <div class="cell-right"><input type="text" class="cell-input" placeholder="联系电话" autocomplete="off"></div>
+                            </div>
+                            <div class="cell-item">
+                                <div class="cell-left">行业工作：</div>
+                                <div class="cell-right"><input type="text" class="cell-input" placeholder="行业工作" autocomplete="off"></div>
+                            </div>
+                            <div class="cell-item">
+                                <div class="cell-left">兴趣爱好：</div>
+                                <div class="cell-right"><input type="text" class="cell-input" placeholder="兴趣爱好" autocomplete="off"></div>
+                            </div>
+                            <div class="cell-item">
+                                <div class="cell-left">精通路线：</div>
+                                <div class="cell-right"><input type="text" class="cell-input" placeholder="精通路线" autocomplete="off"></div>
+                            </div>
+                            <div class="cell-item">
+                                <div class="cell-left">去过地方：</div>
+                                <div class="cell-right"><input type="text" class="cell-input" placeholder="去过地方" autocomplete="off"></div>
+                            </div>
+                            <div class="cell-item">
+                                <div class="cell-left">个人说明：</div>
+                                <div class="cell-right"><input type="text" class="cell-input" placeholder="个人说明" autocomplete="off"></div>
+                            </div>
+                            <button type="button" class="btn-block btn-primary">确定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            
+        </section>
+    </div>
+</section>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/ydui.js"></script>
+<script>(!YDUI.device.isMobile && navigator.userAgent.indexOf('Firefox') >= 0) && YDUI.dialog.alert('PC端请使用谷歌内核浏览器查看！');</script>
+</body>
+</html>

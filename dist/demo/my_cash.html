@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>零钱页</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="css/ydui.css?rev=a4b9d6e8c9c1cae7ea4676f911682af7"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <script src="js/ydui.flexible.js"></script>
+</head>
+<body>
+<section class="g-flexview">
+    <div class="g-scrollview">
+        <section class="g-flexview">
+        <header class="green-top">
+            <div class="cell-item">
+                <div class="cell-left">零钱:0</div>
+                <div class="cell-right m-r-20"><a href="">提现</a></div>
+                <i id="cash_alert" class="icon-question icon-alert"></i>
+            </div>
+        </header>
+        <div class="sec-bar">
+            <div class="cell-item">
+                <div class="cell-left">交易记录</div>
+                <div class="cell-right"><button type="button" class="btn-primary" data-ydui-actionsheet="{target:'#actionSheet',closeElement:'#cancel'}">筛选</button></div>
+            </div>
+        </div>
+        <div class="content-wrap">
+            没有交易记录
+            <div class="m-actionsheet" id="actionSheet">
+                <a href="#" class="actionsheet-item">全部</a>
+                <a href="#" class="actionsheet-item">提现</a>
+                <a href="#" class="actionsheet-item">赞赏</a>
+                <a href="javascript:;" class="actionsheet-action" id="cancel">取消</a>
+            </div>
+        </div>
+        </section>
+    </div>
+</section>
+
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/ydui.js"></script>
+<script>(!YDUI.device.isMobile && navigator.userAgent.indexOf('Firefox') >= 0) && YDUI.dialog.alert('PC端请使用谷歌内核浏览器查看！');
+        !function (win, $) {
+        var dialog = win.YDUI.dialog;
+        /* 普通提示框*/
+        $('#cash_alert').on('click', function () {
+            dialog.alert('账户说明 <br/> 1.赞赏需满10元以上才可以申请提现');
+        });
+            }(window, jQuery);
+</script>
+</body>
+</html>
