@@ -1,0 +1,16 @@
+
+.clear{clear: both;}
+.calendar-box{width: 100%;height: 100%;}
+.calendar-box .head{width: 100%;height:54px;cursor: pointer;}
+.calendar-box .head .prev,.calendar-box .head .next{width: 20%;text-align: center;float: left;line-height: 54px;font-size:14px;}
+.calendar-box .head .tomon{width: 60%;float: left;text-align: center;line-height: 54px;font-size: 14px;}
+.calendar-box .date ol{width: 100%;height: 54px;background: #005bac;padding: 0;}
+.calendar-box .date ol li{display:block;float: left;width: 14.2857%;text-align: center;font-size: 14px;color: #fff;border: none;padding: 0;line-height: 54px;height: 54px;}
+.calendar-box .date ul{width: 100%;display: flex;flex-direction: row;flex-wrap: wrap;}
+.calendar-box .date ul li{display: block;width: 14.2857%;height: 54px;text-align: center;font-size: 14px;background: #fff;position: relative;}
+.calendar-box .date ul li i{font-size: 10px;position: absolute;right: 0;bottom:2px;display:block;height: 15px;line-height: 15px;width: 100%;text-align: center;color: #e35925;}
+.calendar-box .date ul li span{display: block;width: 100%;height: 100%;line-height: 54px;text-align: center;}
+.calendar-box .date ul .no_date{background: #fafafa;color: #999;line-height:54px;}
+.calendar-box .date ul .act_wk{color: #e35925;}
+.calendar-box .date ul .act_date{background: #ff6600;color: #fff;}
+.calendar-box .date ul .act_ds{background: #005bac;color: #fff;}
